@@ -48,12 +48,23 @@ class StudentsViewController: UIViewController {
     // MARK: - Action Handlers
     
     @IBAction func sort(_ sender: UISegmentedControl) {
+        updateDataSource()
     }
     
     @IBAction func filter(_ sender: UISegmentedControl) {
+        updateDataSource()
     }
     
     // MARK: - Private
+    
+    private func updateDataSource() {
+        let filter = TrackType(rawValue: filterSelector.selectedSegmentIndex) ?? .none
+        let sort = SortOptions(rawValue: sortSelector.selectedSegmentIndex) ?? .firstName
+        
+        studentController.filter(with: filter, sortedBy: sort) { (students) in
+            self.filterAndSortedStudents = students
+        }
+    }
 }
 
 extension StudentsViewController: UITableViewDataSource {

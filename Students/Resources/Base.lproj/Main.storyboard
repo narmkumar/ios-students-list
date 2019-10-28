@@ -62,6 +62,9 @@
                                             <segment title="First Name"/>
                                             <segment title="Last Name"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="sort:" destination="01f-f4-DH1" eventType="valueChanged" id="2oP-3f-6QM"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                             </stackView>
@@ -82,6 +85,9 @@
                                             <segment title="Web"/>
                                             <segment title="UX"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="filter:" destination="01f-f4-DH1" eventType="valueChanged" id="Awn-V9-pOp"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                             </stackView>

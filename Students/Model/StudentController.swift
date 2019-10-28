@@ -64,13 +64,13 @@ class StudentController {
                 updatedStudents = students
             }
         if sorter == .firstName {
-            updatedStudents = updatedStudents.sorted { $0.firstName < $1.firstName } 
+            updatedStudents = updatedStudents.sorted { $0.firstName < $1.firstName }
+        } else {
+            updatedStudents = updatedStudents.sorted { $0.lastName < $1.lastName }
         }
         
+        completion(updatedStudents)
         }
-        
-    
-    
 }
 
 
