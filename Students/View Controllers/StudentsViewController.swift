@@ -43,7 +43,7 @@ class StudentsViewController: UIViewController {
             
         })
 
-    }
+    } 
     
     // MARK: - Action Handlers
     
